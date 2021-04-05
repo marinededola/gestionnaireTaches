@@ -40,7 +40,7 @@ const Todo = () => {
     }, [])
 
 
-    //Ajout d'une tâche
+    //Ajouter une tâche
     const setTodoInput = (event) => {
         setTodo(event.target.value)
     }
@@ -53,7 +53,6 @@ const Todo = () => {
             description: todo,
             isComplete: false
         }
-        const newItemList = itemListNotComplete
 
         axios.post('https://6053736845e4b30017291b83.mockapi.io/tasks/',
         {
@@ -71,6 +70,19 @@ const Todo = () => {
        
     }
     
+    //Terminer une tâche
+    const changeStateTodo = (idToChange) => {
+        axios.put('https://6053736845e4b30017291b83.mockapi.io/tasks/'+idToChange,
+        {
+            isComplete: true
+        })
+        .then(() => {
+            updateListTodos()
+        })
+        .catch(error => {
+            alert("The request failed!");
+        })
+    }
 
 	return (
 		<div>
@@ -80,7 +92,7 @@ const Todo = () => {
                 handleInputChange = { setTodoInput }
 			/>
             <h3>Tâches en cours</h3>
-			<List todoList = { itemListNotComplete } />
+			<List todoList = { itemListNotComplete } handleStateChange = { changeStateTodo } />
             <h3>Tâches terminées</h3>
             <List todoList = { itemListComplete } />
 

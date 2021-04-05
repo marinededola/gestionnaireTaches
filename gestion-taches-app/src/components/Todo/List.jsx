@@ -2,7 +2,7 @@ import React from 'react'
 import Item from './Item'
 
 
-const List = ({ todoList }) => {
+const List = ({ todoList, handleStateChange  }) => {
 
     let keyIncr = 0;
 
@@ -24,7 +24,8 @@ const List = ({ todoList }) => {
                         return (<Item 
                                     text={action.description}
                                     createDate={action.createdAt}  
-                                    isComplete={action.isComplete.toString()}  
+                                    isComplete={action.isComplete.toString()}
+                                    handleStateChange={handleStateChange}   
                                     key={keyIncr} 
                                     id={action.id} 
                                 />)
