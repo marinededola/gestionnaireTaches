@@ -1,38 +1,126 @@
-.App {
+
+html, body {
+  height: 95vh;
+  margin: 0;
+  padding: 0;
+  color:#F6E761;
+  background-color: #183153;
+  cursor: default;
+}
+
+#main{
   text-align: center;
+  display: block;
+  width: 80vw;
+  margin: 15px auto 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Titres */
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Listes*/
+#lists{
+  margin-top: 5vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-gap: 2rem;
+}
+.list{
+  height: 70vh;
+  width: 50vw;
+  border-radius: 1em;
+  background-color: #6E96D5;
+  color: #183153;
+  overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  padding: 0 10px;
+  list-style: none;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul>li{
+  clear: both;
+  list-style: none;
+  overflow: hidden;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  border-radius: 1em;
+}
+
+#listComplete li {
+  color:  #183153;
+  text-decoration: line-through;
+  text-decoration-color:#00628C;
+
+}
+
+/* Button*/
+input, button{
+  outline: none;
+}
+
+button {
+  background-color: #F6E761;
+  border: none;
+  color: #183153;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  font-size: 13px;
+  border-radius: 1em;
+  font-weight: bold;
+
+}
+
+button:hover {
+  background: #00628C;
+  color: #F6E761;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 400ms;
+  transition-property: background-color;
+}
+
+/* Input */
+input[type="text"] {
+    width: 35vw;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1em;
+    height: 1em;
+    padding: 10px;
+    border: 1px solid #00628C;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+}
+
+input[type="text"]:focus {
+    color: #333;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #F6E761; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #F6E761; 
+  border-radius: 10px;
 }
