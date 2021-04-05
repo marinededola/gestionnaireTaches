@@ -10,10 +10,11 @@ Lancer dans l'invité de commandes: npm-start
 -Récupération des données de l'API
 -Affichage liste de tâches
 -Organisation liste de tâches (blocs, tri...)
-
-# Fonctionnalités en cours d'implémentation
 -Champ d'ajout de tâche
 
-# Fonctionnalités à implémenter
+# Fonctionnalités en cours d'implémentation
 -Possiblité de terminer une tâche
+
+# Fonctionnalités à implémenter
 -Bouton de suppression des tâches terminées
+-Esthétique/ Affichage
