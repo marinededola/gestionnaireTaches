@@ -12,9 +12,10 @@ Lancer dans l'invité de commandes: npm-start
 -Organisation liste de tâches (blocs, tri...)
 -Champ d'ajout de tâche
 -Possiblité de terminer une tâche
-
-# Fonctionnalités en cours d'implémentation
 -Bouton de suppression des tâches terminées
 
-# Fonctionnalités à implémenter
+# Fonctionnalités en cours d'implémentation
 -Esthétique/ Affichage
+
+# Fonctionnalités à implémenter
+
