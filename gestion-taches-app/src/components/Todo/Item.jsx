@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Item = ({ text, createDate }) => {
+const Item = ({ text, createDate, isComplete }) => {
     return (
         <li>
-            <a>{text}</a>
-            <a>{createDate}</a>
+            {text}
+            {createDate}
+            {isComplete}
         </li>
     )
 }

@@ -17,6 +17,7 @@ const List = ({ todoList }) => {
                         return (<Item 
                                     text={action.description}
                                     createDate={action.createdAt}  
+                                    isComplete={action.isComplete.toString()}  
                                     key={keyIncr} 
                                     id={action.id} 
                                 />)
