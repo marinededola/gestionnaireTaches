@@ -8,7 +8,7 @@ const Formulaire = ({
     return (
         <div>
             <input type="text" onChange={(event) => handleInputChange(event) }/>
-            <button onClick={() => { handleInsert() }}>Ajout</button>
+            <button onClick={() => { handleInsert() }}>Ajouter</button>
         </div>
     )
 }

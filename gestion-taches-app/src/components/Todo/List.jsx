@@ -2,7 +2,7 @@ import React from 'react'
 import Item from './Item'
 
 
-const List = ({ todoList, handleStateChange  }) => {
+const List = ({ todoList, handleStateChange, type  }) => {
 
     let keyIncr = 0;
 
@@ -15,7 +15,7 @@ const List = ({ todoList, handleStateChange  }) => {
 
     //Déclaration de composant Item pour chaque élément de la liste
     return (
-        <ul>
+        <ul id={type}>
             {
             todoList &&
             todoList.map(
@@ -23,8 +23,7 @@ const List = ({ todoList, handleStateChange  }) => {
                         keyIncr++;
                         return (<Item 
                                     text={action.description}
-                                    createDate={action.createdAt}  
-                                    isComplete={action.isComplete.toString()}
+                                    createDate={new Date(action.createdAt).toLocaleDateString('en-US')}  
                                     handleStateChange={handleStateChange}   
                                     key={keyIncr} 
                                     id={action.id} 

@@ -98,18 +98,23 @@ const Todo = () => {
 
     }
 	return (
-		<div>
+		<div id="main">
 			<h2>Gestionnaire de tâches</h2>
             <Formulaire
-				handleInsert = { insertTodo }
+                handleInsert = { insertTodo }
                 handleInputChange = { setTodoInput }
-			/>
-            <h3>Tâches en cours</h3>
-			<List todoList = { itemListNotComplete } handleStateChange = { changeStateTodo } />
-            <h3>Tâches terminées</h3>
-            <button onClick={() => deleteAllCompleteTasks(itemListComplete) }>Supprimer toutes les tâches terminées</button>
-            <List todoList = { itemListComplete } />
-
+            />
+            <div id="lists">
+                <div className="list" id="listNotComplete">
+                    <h3>Tâches en cours</h3>
+                    <List todoList = { itemListNotComplete } handleStateChange = { changeStateTodo } type = "listNotComplete" />
+                </div>
+                <div className="list" id="listComplete">
+                    <h3>Tâches terminées</h3>
+                    <button onClick={() => deleteAllCompleteTasks(itemListComplete) }>Supprimer toutes les tâches terminées</button>
+                    <List todoList = { itemListComplete } type = "listComplete"/>
+                </div>
+            </div>
 		</div>
 	)
 }

@@ -13,9 +13,13 @@ Lancer dans l'invité de commandes: npm-start
 -Champ d'ajout de tâche
 -Possiblité de terminer une tâche
 -Bouton de suppression des tâches terminées
+-Esthétique/ Affichage
 
 # Fonctionnalités en cours d'implémentation
--Esthétique/ Affichage
 
 # Fonctionnalités à implémenter
 
+#Bibliothèque
+
+-Axios: Traitement facilité des erreurs http, utilisation de promesses
+-Font Awesome: Intégration simple de différents icônes

@@ -1,13 +1,16 @@
 import React from 'react'
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Item = ({ text, createDate, isComplete, handleStateChange, id   }) => {
+const Item = ({ text, createDate, handleStateChange, id   }) => {
 
     return (
         <li>
-            {text}
-            {handleStateChange && <button onClick={() => { handleStateChange(id) }}>Terminer</button>}
             {createDate}
-            {isComplete}
+            -
+            {text}
+            {handleStateChange && <button onClick={() => { handleStateChange(id) }}><FontAwesomeIcon icon={faCheck} /></button>}
+
         </li>
     )
 }
