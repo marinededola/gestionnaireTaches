@@ -9,12 +9,11 @@ Lancer dans l'invité de commandes: npm-start
 -Initialisation projet create-react-app
 -Récupération des données de l'API
 -Affichage liste de tâches
-
-# Fonctionnalités en cours d'implémentation
 -Organisation liste de tâches (blocs, tri...)
 
-# Fonctionnalités à implémenter
-
+# Fonctionnalités en cours d'implémentation
 -Champ d'ajout de tâche
+
+# Fonctionnalités à implémenter
 -Possiblité de terminer une tâche
 -Bouton de suppression des tâches terminées
