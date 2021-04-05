@@ -13,7 +13,7 @@ const Todo = () => {
 
 
     //Mise à jour de la liste des tâches
-    function updateListTodos (){
+    const updateListTodos = () =>{
         axios.get('https://6053736845e4b30017291b83.mockapi.io/tasks')
         .then(res => {
             const initItemList = res.data
@@ -84,6 +84,19 @@ const Todo = () => {
         })
     }
 
+    //Supprimer toutes les tâches terminées
+    const deleteAllCompleteTasks = () =>{
+        itemListComplete.forEach((item) => {
+            axios.delete('https://6053736845e4b30017291b83.mockapi.io/tasks/'+item.id)
+            .then(() => {
+                updateListTodos()
+            })
+            .catch(error => {
+                alert("The request failed!");
+            })
+        })
+
+    }
 	return (
 		<div>
 			<h2>Gestionnaire de tâches</h2>
@@ -94,6 +107,7 @@ const Todo = () => {
             <h3>Tâches en cours</h3>
 			<List todoList = { itemListNotComplete } handleStateChange = { changeStateTodo } />
             <h3>Tâches terminées</h3>
+            <button onClick={() => deleteAllCompleteTasks(itemListComplete) }>Supprimer toutes les tâches terminées</button>
             <List todoList = { itemListComplete } />
 
 		</div>
